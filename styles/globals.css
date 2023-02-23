@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+html,
+body {
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #181618;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+::selection {
+  background-color: var(--color-background-secondary);
+  ;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+p,
+blockquote {
+  margin: 0;
+  padding: 0;
+  text-align: flex-start;
+}
+
+/* Normalizes font-size for headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+/* Removes list-style from lists */
+ol,
+ul {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Normalizes font-style and font-weight to normal */
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Removes spacing in tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: -webkit-fill-available;
+}
+
+/* Removes border from fieldset and img */
+fieldset,
+img {
+  border: 0;
+}
+
+/* Left-aligns text in caption and th */
+caption,
+th {
+  text-align: left;
+}
+
+/* Removes quotation marks from q */
+q:before,
+q:after {
+  content: '';
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: PFont-Bold;
+  src: url('../public/fonts/Poppins-Bold.ttf')
+}
+
+@font-face {
+  font-family: PFont-Medium;
+  src: url('../public/fonts/Poppins-Medium.ttf')
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url('../public/fonts/Poppins-Regular.ttf')
+}
+
+@font-face {
+  font-family: PFont-Light;
+  src: url('../public/fonts/Poppins-Light.ttf')
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+    height: 10px;
+    width: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 90, 0);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  body {
+    color: white;
+    /* overflow: auto; */
+    background: #181618;
+  }
+}
+
+/* Fin de Hoja de Normalización */
+
+.filter label {
+  display: inline-block;
+  margin: 0 4%;
+  color: #00a2c5;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer
+}
+
+@media(min-width: 1440px) {
+  .filter label {
+    margin: 0 5%;
+    font-size: 1.3125rem
+  }
+}
+
+@media(max-width: 1439px) {
+  .filter label {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40%;
+    flex: 1 1 40%;
+    text-align: left
+  }
+}
+
+@media(max-width: 1000px) {
+  .filter label {
+    margin-right: 0;
+    margin-left: 30px;
+    display: block;
+    padding: 0 0 10px
+  }
+}
+
+@media(max-width: 500px) {
+  .filter:not(.grouped-filter) label {
+    margin-left: 0
+  }
+}
+
+.filter input[type=checkbox]:checked+.label-text::before,
+.filter input[type=radio]:checked+.label-text::before {
+  cursor: pointer;
+  background-color: transparent
+}
+
+.filter.filter-radio input[type=checkbox]+.label-text,
+.filter.filter-radio input[type=radio]+.label-text {
+  padding-left: 0;
+  border-bottom: 1px dashed #00a2c5
+}
+
+.filter.filter-radio input[type=checkbox]+.label-text::before,
+.filter.filter-radio input[type=checkbox]+.label-text::after,
+.filter.filter-radio input[type=radio]+.label-text::before,
+.filter.filter-radio input[type=radio]+.label-text::after {
+  display: none
+}
+
+.filter.filter-radio input[type=checkbox]:checked+.label-text,
+.filter.filter-radio input[type=radio]:checked+.label-text {
+  cursor: pointer;
+  border-bottom-color: transparent;
+  color: #343639
+}
+
+.filter .label-text {
+  cursor: pointer !important
+}
+
+@media(max-width: 500px) {
+  .filter:not(.grouped-filter) label {
+    margin-left: 0
+  }
+}
+
+.filter input[type=checkbox]:checked+.label-text::before,
+.filter input[type=radio]:checked+.label-text::before {
+  cursor: pointer;
+  background-color: transparent
+}
+
+.filter.filter-radio input[type=checkbox]+.label-text,
+.filter.filter-radio input[type=radio]+.label-text {
+  padding-left: 0;
+  border-bottom: 1px dashed #00a2c5
+}
+
+.filter.filter-radio input[type=checkbox]+.label-text::before,
+.filter.filter-radio input[type=checkbox]+.label-text::after,
+.filter.filter-radio input[type=radio]+.label-text::before,
+.filter.filter-radio input[type=radio]+.label-text::after {
+  display: none
+}
+
+.filter.filter-radio input[type=checkbox]:checked+.label-text,
+.filter.filter-radio input[type=radio]:checked+.label-text {
+  cursor: pointer;
+  border-bottom-color: transparent;
+  color: #343639
+}
+
+.filter .label-text {
+  cursor: pointer !important
+}
+
+.stats {
+  padding-top: 120px;
+  text-align: center
+}

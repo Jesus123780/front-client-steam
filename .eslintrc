@@ -1,0 +1,21 @@
+{
+    "extends": [
+        "next/babel",
+        "plugin:react-hooks/recommended",
+        "eslint:recommended",
+        "next",
+        "react-hooks",
+        "plugin:react/recommended",
+        "prettier"
+    ],
+    "plugin": [
+      "react",
+      "react-hooks",
+      "prettier",
+      "@typescript-eslint"
+    ],
+    "globals": {
+        "process": true
+    }
+    
+}
