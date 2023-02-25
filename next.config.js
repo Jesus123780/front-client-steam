@@ -98,14 +98,9 @@ module.exports = (phase) => {
   }
   return {
     env,
-    swcMinify: false,
     images,
     headers,
-    optimizeFonts: false,
-    nextConfig,
     rewrites,
-    redirects,
-    assetPrefix,
-    resolveUniqueReactForHooks
+    redirects
   }
 }
