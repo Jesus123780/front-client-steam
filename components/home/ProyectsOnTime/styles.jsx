@@ -38,6 +38,11 @@ export const Box = styled.div`
     max-width: 50%;
     height: 320px;
     flex-wrap: wrap;
+    p {
+        font-family: 'Poppins';
+  font-size: 20px;
+  text-align: justify;
+    }
     ${props => props.right && css`
     display: flex;
     justify-content: end;

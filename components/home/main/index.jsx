@@ -1,12 +1,15 @@
-import React from 'react'
+import { useContext } from 'react'
 import { Text } from '~/components/Text'
 import { TextAnimation } from '~/components/TextAnimation'
+import { Context } from '~/context/Context'
 import { useScroll, Easing } from '~/hooks/useScroll'
 import { getGlobalStyle } from '~/utils'
 import { ContentMain } from './styles'
 import { WrapperFigure } from './WrapperFigure'
 
 export const Main = () => {
+  const { setType } = useContext(Context)
+
   const progress = useScroll({
     ease: Easing.easeInOutQuad,
     start: '50vh',
@@ -19,7 +22,7 @@ export const Main = () => {
       id='Main'
     >
       {/* <TextAnimation /> */}
-      <div className='ctn_first'>
+      <div className='ctn_first' onMouseEnter={() => setType('slider-drag')} onMouseOver={() => setType('slider-drag')}>
         <div className='ctn_first__title'>
           <h1 className='title'>
             <div className='ctn_flex'>

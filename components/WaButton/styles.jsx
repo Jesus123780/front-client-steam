@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const WPButton = styled.div`
     position: relative;
+    z-index: 9999;
     .wa-container  {
         right: auto;
         left: 20px;

@@ -20,6 +20,7 @@ const Provider = ({ children }) => {
   // | "hamburger"
   // | "default";
   const [type, setType] = useState('default')
+  console.log(type)
   const value = useMemo(
     () => {
       return {

@@ -10,7 +10,7 @@ import { Cube } from './Cube'
 import { Advantage } from './Advantage'
 import { ProyectsOnTime } from './ProyectsOnTime'
 import { Plans } from './Plans'
-import { OurGalery } from './OurGalery'
+// import { OurGalery } from './OurGalery'
 import { Easing, useScroll } from '~/hooks/useScroll'
 
 export const Home = () => {
@@ -20,7 +20,7 @@ export const Home = () => {
     end: '2vh'
   })
   return (
-    <div >
+    <div className='app-content'>
       <Main />
       <Cube
         end={true}
@@ -37,7 +37,7 @@ export const Home = () => {
       <SectionWork />
       <Band />
       <Advantage />
-      <OurGalery />
+      {/* <OurGalery /> */}
       <Plans />
       <ProyectsOnTime />
       <OursTechnologies />

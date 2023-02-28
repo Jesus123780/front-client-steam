@@ -11,6 +11,7 @@ position: relative;
 place-items: center;
 position: relative;
 display: flex;
+height: 80vh;
 .content-band {
     background-color: #cee959;
     color: var(--color-base-black);

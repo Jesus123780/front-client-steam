@@ -17,7 +17,7 @@ const CustomCursor = ({ children }) => {
     distanceY: 0,
     key: -1
   })
-  const [mouse] = useState(false)
+  const [mouse] = useState(true)
   React.useEffect(() => {
     if (mouse) {
       document.addEventListener('mousemove', (event) => {
@@ -78,7 +78,7 @@ const CustomCursor = ({ children }) => {
   return (
         <Content>
             <div className={`cursor-wrapper ${type}`}>
-                <div className="secondary-cursor" ref={thirdCursor}>
+                <div className="secondary-cursor hidden" ref={thirdCursor}>
                     <div className="cursor-background"></div>
                 </div>
                 <div className="main-cursor " ref={mainCursor}>
@@ -97,6 +97,9 @@ CustomCursor.propTypes = {
   children: PropTypes.any
 }
 const Content = styled.div`
+.hidden {
+  opacity: 0;
+}
 .cursor-wrapper {
     position: fixed;
     z-index: var(--z-index-99999)
